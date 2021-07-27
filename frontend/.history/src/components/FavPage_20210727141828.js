@@ -33,7 +33,7 @@ export class FavPage extends Component {
     }
     render() {
         if(this.state.hide){
-            return null
+            
         }
         return (
             <>

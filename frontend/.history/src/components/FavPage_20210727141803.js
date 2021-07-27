@@ -7,7 +7,7 @@ export class FavPage extends Component {
         super()
         this.state = {
             favData: [],
-            showFavData: false,
+            showFavData: false
             hide:false
         }
     }
@@ -32,9 +32,6 @@ export class FavPage extends Component {
 
     }
     render() {
-        if(this.state.hide){
-            return null
-        }
         return (
             <>
                 {this.state.showFavData && this.state.favData.map((item, i) => {

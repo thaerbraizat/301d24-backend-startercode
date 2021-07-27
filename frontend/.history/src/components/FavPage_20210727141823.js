@@ -32,9 +32,7 @@ export class FavPage extends Component {
 
     }
     render() {
-        if(this.state.hide){
-            return null
-        }
+        if(this.state.hide)
         return (
             <>
                 {this.state.showFavData && this.state.favData.map((item, i) => {

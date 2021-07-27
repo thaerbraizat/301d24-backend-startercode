@@ -7,11 +7,9 @@ export class FavPage extends Component {
         super()
         this.state = {
             favData: [],
-            showFavData: false,
-            hide:false
+            showFavData: false
         }
     }
-    
     componentDidMount = () => {
 
         axios.get("http://localhost:8001/fav-list").then(res => {
@@ -23,18 +21,7 @@ export class FavPage extends Component {
         })
 
     }
-    deleteFav =(id)=>{
-        axios.delete(`http://localhost:8001/delete/${id}`).then(res =>{
-            this.setState({
-                hide:true,
-            })
-        })
-
-    }
     render() {
-        if(this.state.hide){
-            return null
-        }
         return (
             <>
                 {this.state.showFavData && this.state.favData.map((item, i) => {
